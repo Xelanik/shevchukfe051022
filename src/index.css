@@ -1,13 +1,91 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.holy-grail {
+  display: flex;
+  flex-direction: column;
+
+  width: 1400px;
+  height: 900px;
+  overflow: scroll;
+}
+
+.holy-grail__main {
+  min-height: 1000px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.holy-grail__left {
+  width: 25%;
+}
+
+.holy-grail__middle {
+  flex-grow: 1;
+}
+
+.holy-grail__right {
+  width: 20%;
+}
+
+.header {
+  top: 0;
+  position: sticky;
+  height: 100px;
+  min-height: 50px;
+}
+
+.footer {
+  bottom: 0;
+  position: sticky;
+  min-height: 50px;
+  height: 100px;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cats {
+  background-image: url("./assets/images/cats.jpg");
+}
+
+.chubaka {
+  background-image: url("./assets/images/chubaka.jpg");
+}
+
+.dogs {
+  background-image: url("./assets/images/dogs.jpg");
+}
+
+.dyno {
+  background-image: url("./assets/images/dyno.jpg");
+}
+
+.planets {
+  background-image: url("./assets/images/planets.jpg");
 }

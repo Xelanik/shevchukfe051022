@@ -1,9 +1,16 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, fireEvent } from "@testing-library/react";
 
-test('renders learn react link', () => {
+import App from "./App";
+
+test("background must be change", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const header = screen.getByText(/Header/i);
+  const button = screen.getByText(/Change backgrounds/i);
+
+  fireEvent.click(button);
+
+  expect(header.getAttribute("class")).toMatch(
+    /(cats|chubaka|dogs|dyno|planets)$/
+  );
 });
